@@ -1,17 +1,33 @@
-# Java / Maven
+# ─── Java / Maven ───────────────────────────────
 target/
 *.class
 *.jar
+*.war
+*.ear
+.mvn/
+!**/src/main/*
+!**/src/test/*
 
-# Playwright
+# ─── Playwright ─────────────────────────────────
 node_modules/
 playwright-ui/reports/
-playwright/.auth/
 playwright-ui/test-results/
+playwright-ui/playwright-report/
+playwright/.auth/
+playwright-ui/.auth/
 
-# Environment
+# ─── Environment (never commit secrets) ─────────
 .env
+.env.local
+.env.*.local
 
-# OS
+# ─── OS ─────────────────────────────────────────
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# ─── IDE / Antigravity ──────────────────────────
+.idea/
+*.iml
+.vscode/
+.antigravity/
